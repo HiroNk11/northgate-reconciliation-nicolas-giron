@@ -1,0 +1,9 @@
+﻿claim_id,matched_invoice,status_flag,note
+CLM-4401,INV-10432,CLEAN_MATCH,Normalized invoice match; absolute difference=$0.00 <= $1.00; invoice dated in 2025.
+CLM-4402,0088217,CLEAN_MATCH,Normalized invoice match; absolute difference=$0.00 <= $1.00; invoice dated in 2025.
+CLM-4403,INV-10501,AMOUNT_OVERSTATED,"Normalized invoice match; claim=$412.00, invoice=$380.00; absolute difference=$32.00 > $1.00."
+CLM-4404,,AMBIGUOUS_NO_MATCH,PO-5521: 2 invoices (INV-10517; INV-10519); no candidate selected by amount.
+CLM-4405,INV-10611,CLEAN_MATCH,Normalized invoice match; absolute difference=$0.01 <= $1.00; invoice dated in 2025.
+CLM-4406,INV-09988,OUT_OF_PERIOD,Normalized invoice match; invoice_date=2024-11-02 outside the 2025 audit window.
+CLM-4407,,PHANTOM,No invoice or PO match in the ledger.
+CLM-4408,INV-10600,CLEAN_MATCH,Fallback through unique PO PO-5530; absolute difference=$0.00 <= $1.00; invoice dated in 2025.
