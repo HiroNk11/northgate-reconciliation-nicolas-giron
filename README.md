@@ -8,7 +8,7 @@
 - `test_reconciliation.py`: parametrized tests, including the PO-5521 ambiguity guard.
 - `AI_Working_Log_Final.md`: AI working log.
 
-The ZIP also includes the two original CSV inputs and `requirements-dev.txt`. Keep all files together after extraction; the inputs are the official fixtures for the full-case test.
+The repository and ZIP also include `fernhill_claims.csv`, `northgate_ledger.csv` and `requirements-dev.txt`. Keep all files together after extraction; the inputs are the official fixtures for the full-case test.
 
 ## Run the reconciliation
 
@@ -27,7 +27,7 @@ python -m pytest -q test_reconciliation.py
 
 Alternatively, run `python test_reconciliation.py -q`; this entry point also requires pytest. The 14 parametrized cases are reported independently. The full-case fixture locates the input CSV files relative to the test file, regardless of the working directory.
 
-Translation verification: syntax and reconciliation outputs were checked. The 14 test cases were checked through auxiliary execution of their assertions without pytest decorators. pytest collection and fixture resolution were not executed in the translation environment because pytest was unavailable. The working log retains its historical record of seven test functions executed before the parametrization update.
+Final verification (October 1, 2026): all 14 test cases passed under pytest 9.1.1. The generated register matched all eight delivered rows and notes. `requirements-dev.txt` allows `pytest>=8,<10`, including the verified version. Earlier validation details remain in the AI working log as historical context.
 
 ## Business interpretation
 

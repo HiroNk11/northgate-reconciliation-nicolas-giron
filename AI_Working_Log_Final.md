@@ -2,7 +2,7 @@
 
 **Case:** Northgate Outdoor Supply / Fernhill Mart  
 **Analyst:** Nicolás Girón  
-**Sources:** `fernhill_claims(1).csv`, `northgate_ledger(1).csv` and the case instructions.  
+**Sources:** `fernhill_claims.csv`, `northgate_ledger.csv` and the case instructions.  
 **Audit period:** invoices issued from 2025-01-01 through 2025-12-31, inclusive.
 
 ## Scope and transparency
@@ -111,7 +111,25 @@ The following matrix links each decision to verifiable data in the CSV files. It
 
 - **Coverage:** eight claims and eight results; the described review covers 100% of the batch rows.
 - **Amount integrity:** $3,624.90 + $2,732.75 = **$6,357.65**. Exceptions consist of $412.00 for an amount discrepancy, $915.75 for ambiguity, $875.00 outside the audit period and $530.00 without a ledger record.
-- **Documented automated validation:** the assistant executed seven test functions through the direct runner; all passed. They cover the ambiguous case, the complete result and the date and tolerance boundaries. The file is compatible with pytest, but no successful pytest execution is claimed: the package was not installed in that environment.
+- **Documented automated validation:** the assistant executed seven test functions through the direct runner; all passed. They cover the ambiguous case, the complete result and the date and tolerance boundaries. The file is compatible with pytest, but pytest was unavailable in that earlier environment. The final validation below supersedes that limitation.
 - **Ownership:** AI supported drafting and verification; the candidate takes responsibility for explaining each row, applying the rules and supporting commercial decisions with independent evidence.
 
 The register is reproducible and defensible for the supplied data and the six case rules: every classification has identifiable evidence and has been checked against the expected output. This conclusion is not an absolute guarantee concerning unavailable external information or an automatic authorization of financial deductions.
+
+## 5. Final submission review - October 1, 2026
+
+### Prompt submitted
+
+**English summary of the final review request:**
+
+> Review the submission for inconsistencies and filename differences. Correct the findings, keep all deliverables and comments in English, upload the corrected files to GitHub and provide an updated ZIP.
+
+### AI response and verification
+
+The assistant corrected the input filenames in this log, updated the README's validation record and changed the executive summary's retailer contact to Fernhill's Accounts Payable or deductions team. The original reconciliation rules and claim classifications were retained.
+
+The final suite was executed with Python and pytest 9.1.1: all 14 test cases passed. The development requirement now permits pytest versions from 8 up to, but excluding, 10, including the verified version. An attempted installation of pytest 8 failed because of filesystem permissions; pytest 8 execution is not claimed.
+
+The regenerated register was compared with the delivered CSV, including every note: all eight rows matched. The claimed total is $6,357.65, consisting of $3,624.90 in CLEAN_MATCH and $2,732.75 in exceptions. The executive summary was checked to remain one page.
+
+This final verification was performed by the assistant. It does not establish that the candidate personally repeated these checks. The candidate remains responsible for reviewing the final submission and explaining its decisions.
