@@ -9,6 +9,14 @@
 
 This log organizes the work into four key interactions: specification, ambiguity control, exception review and consolidation. Prompts are summarized or reconstructed rather than reproduced verbatim. Personal checks and the initial interventions concerning ambiguity and OCR are described based on the candidate's account. Those initial exchanges are not present in the reviewed ChatGPT history; their exact sequence should be supported by the original conversation. The results and the assistant's executions were checked against the available files.
 
+## Evidence boundaries
+
+- **Documented:** the prompts identified below as documented, the final files and the validation record reported in this log.
+- **Reconstructed:** the early ambiguity and OCR exchanges in sections 2 and 3, based on the candidate's account. They are not verbatim transcripts or independently verified evidence of the sequence of authorship.
+- **Verifiable from the deliverables:** classifications, amounts and expected test results. These support the technical outcome, but do not by themselves establish who first proposed a rule or personally ran a check.
+
+The original account is retained below, with these limits applying to its attribution claims.
+
 ## 1. Rule specification and initial proposal
 
 ### Prompt submitted
@@ -29,7 +37,7 @@ Based on my personal review, I checked all eight claims row by row against the o
 
 The criterion was to accept only associations supported by the ledger. Format normalization is valid; a similar amount or an incomplete reference is insufficient to identify an invoice. Amount comparisons use `invoice_amount`, not `paid_amount`.
 
-## 2. Human intervention: ambiguity guard for PO-5521
+## 2. Reported intervention: ambiguity guard for PO-5521
 
 ### Prompt submitted
 
@@ -49,7 +57,7 @@ I reviewed the ledger rows for PO-5521 and confirmed two independent invoices: `
 
 I corrected the amount-based selection described in my account. The final result is `AMBIGUOUS_NO_MATCH`, with `matched_invoice` left blank. Uniqueness is assessed across the entire ledger before applying the audit window. The test confirms that the result is unchanged even when one candidate matches the amount exactly and when the invoice order is reversed.
 
-## 3. Human verification: OCR reference and audit window
+## 3. Reported checks: OCR reference and audit window
 
 ### Prompt submitted
 
@@ -133,3 +141,4 @@ The final suite was executed with Python and pytest 9.1.1: all 14 test cases pas
 The regenerated register was compared with the delivered CSV, including every note: all eight rows matched. The claimed total is $6,357.65, consisting of $3,624.90 in CLEAN_MATCH and $2,732.75 in exceptions. The executive summary was checked to remain one page.
 
 This final verification was performed by the assistant. It does not establish that the candidate personally repeated these checks. The candidate remains responsible for reviewing the final submission and explaining its decisions.
+
